@@ -21,8 +21,7 @@
                                         "condition": "minecraft:entity_properties",
                                         "entity": "this",
                                         "predicate": {
-                                            "type_specific": {
-                                                "type": "minecraft:player",
+                                            "minecraft:type_specific/player": {
                                                 "gamemode": [
                                                     "creative",
                                                     "adventure",
@@ -47,8 +46,7 @@
                                         "condition": "minecraft:entity_properties",
                                         "entity": "this",
                                         "predicate": {
-                                            "type_specific": {
-                                                "type": "minecraft:player",
+                                            "minecraft:type_specific/player": {
                                                 "gamemode": [
                                                     "survival",
                                                     "adventure",
@@ -73,8 +71,7 @@
                                         "condition": "minecraft:entity_properties",
                                         "entity": "this",
                                         "predicate": {
-                                            "type_specific": {
-                                                "type": "minecraft:player",
+                                            "minecraft:type_specific/player": {
                                                 "gamemode": [
                                                     "survival",
                                                     "creative",
@@ -99,8 +96,7 @@
                                         "condition": "minecraft:entity_properties",
                                         "entity": "this",
                                         "predicate": {
-                                            "type_specific": {
-                                                "type": "minecraft:player",
+                                            "minecraft:type_specific/player": {
                                                 "gamemode": [
                                                     "survival",
                                                     "creative",
