@@ -1,0 +1,1 @@
+function creation:backend/teleport/void/superflat/go_to_location with storage creation:world/creation world.superflat.default

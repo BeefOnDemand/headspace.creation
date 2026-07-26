@@ -1,0 +1,1 @@
+$execute in creation:normal run tp @s $(x) $(y) $(z)
