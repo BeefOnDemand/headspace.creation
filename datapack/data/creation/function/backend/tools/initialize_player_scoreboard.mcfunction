@@ -1,6 +1,7 @@
 execute unless score @s cr.check.TeleportSuccess matches 1 run scoreboard players set @s cr.check.TeleportSuccess 0
 execute unless score @s cr.check.PermanentChunk matches 1 run scoreboard players set @s cr.check.PermanentChunk 0
 execute unless score @s cr.check.LoadedChunk matches 1 run scoreboard players set @s cr.check.LoadedChunk 0
+execute unless score @s cr.check.BedLocated matches 1 run scoreboard players set @s cr.check.BedLocated 0
 
 scoreboard players set @s[gamemode=survival] cr.track.PlayerGamemode 0
 scoreboard players set @s[gamemode=creative] cr.track.PlayerGamemode 1
