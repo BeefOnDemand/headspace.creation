@@ -4,7 +4,8 @@
             "trigger": "minecraft:location",
             "conditions": {
                 "player": {
-                    "minecraft:type_specific/player": {
+                    "type_specific": {
+                        "type": "minecraft:player",
                         "advancements": {
                             "creation:admin/full_reset": true
                         }
