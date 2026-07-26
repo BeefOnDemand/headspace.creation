@@ -1,0 +1,1 @@
+function creation:backend/teleport/void/normal/go_to_location with storage creation:world/creation world.normal.default
