@@ -37,6 +37,7 @@ scoreboard objectives add cr.admin.PlayerInitialized dummy
 scoreboard objectives add cr.check.TeleportSuccess dummy
 scoreboard objectives add cr.check.PermanentChunk dummy
 scoreboard objectives add cr.check.LoadedChunk dummy
+scoreboard objectives add cr.check.BedLocated dummy
 scoreboard objectives add cr.check.ConditionsPassed dummy
 scoreboard objectives add cr.check.InventorySlot dummy
 scoreboard objectives add cr.check.OtherworldGamemode dummy
