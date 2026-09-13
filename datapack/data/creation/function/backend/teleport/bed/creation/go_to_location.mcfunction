@@ -7,5 +7,5 @@ $execute in $(dimension) if score @s cr.check.PermanentChunk matches 0 run tag @
 
 $execute if score @s cr.check.LoadedChunk matches 1 run function creation:backend/tools/check_target_area_for_bed {dimension:"$(dimension)",x:"$(x)",y:"$(y)",z:"$(z)",bed_type:"yellow_bed"}
 
-$execute at @s as @a[distance=..1.5,sort=furthest,predicate=creation:on_creation_bed,predicate=!creation:sneaking,predicate=creation:creation_user] in $(dimension) if score @s cr.check.BedLocated matches 1 run tp $(x) $(y) $(z)
-$execute in $(dimension) if score @s cr.check.BedLocated matches 1 run return run tp $(x) $(y) $(z)
+$execute if score @s cr.check.BedLocated matches 1 at @s as @a[distance=..2,sort=furthest,predicate=creation:on_creation_bed,predicate=!creation:sneaking,predicate=creation:creation_user] in $(dimension) run tp $(x) $(y) $(z)
+$execute if score @s cr.check.BedLocated matches 1 in $(dimension) run return run tp $(x) $(y) $(z)
