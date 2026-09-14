@@ -3,24 +3,24 @@
         "requirement": {
             "trigger": "minecraft:tick",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:entity_scores",
-                        "entity": "this",
-                        "scores": {
-                            "cr.event.SteppingOnCreationBed": {
-                                "min": 1
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "type": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "cr.event.SteppingOnCreationBed": {
+                                    "min": 1
+                                }
                             }
+                        },
+                        {
+                            "type": "minecraft:inverted",
+                            "term": "creation:on_creation_bed"
                         }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:reference",
-                            "name": "creation:on_creation_bed"
-                        }
-                    }
-                ]
+                    ]
+                }
             }
         }
     },

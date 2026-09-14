@@ -1,15 +1,12 @@
 {
-    "condition": "all_of",
+    "type": "all_of",
     "terms": [
+        "creation:in_otherworld",
         {
-            "condition": "minecraft:reference",
-            "name": "creation:in_otherworld"
-        },
-        {
-            "condition": "minecraft:any_of",
+            "type": "minecraft:any_of",
             "terms": [
                 {
-                    "condition": "minecraft:entity_properties",
+                    "type": "minecraft:entity_properties",
                     "entity": "this",
                     "predicate": {
                         "stepping_on": {
@@ -20,7 +17,7 @@
                     }
                 },
                 {
-                    "condition": "minecraft:entity_properties",
+                    "type": "minecraft:entity_properties",
                     "entity": "this",
                     "predicate": {
                         "location": {

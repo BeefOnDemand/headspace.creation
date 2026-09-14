@@ -3,21 +3,21 @@
         "requirement": {
             "trigger": "minecraft:location",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "creation:on_superflat_transfer_bed"
-                    },
-                    {
-                        "condition": "minecraft:entity_scores",
-                        "entity": "this",
-                        "scores": {
-                            "cr.event.SteppingOnSuperflatTransferBed": {
-                                "min": 1
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        "creation:on_superflat_transfer_bed",
+                        {
+                            "type": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "cr.event.SteppingOnSuperflatTransferBed": {
+                                    "min": 1
+                                }
                             }
                         }
-                    }
-                ]
+                    ]
+                }
             }
         }
     },

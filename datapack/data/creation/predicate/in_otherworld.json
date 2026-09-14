@@ -1,7 +1,4 @@
 {
-    "condition": "minecraft:inverted",
-    "term": {
-        "condition": "minecraft:reference",
-        "name": "creation:in_creation"
-    }
+    "type": "minecraft:inverted",
+    "term": "creation:in_creation"
 }

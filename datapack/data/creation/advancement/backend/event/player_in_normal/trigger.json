@@ -3,21 +3,21 @@
         "requirement": {
             "trigger": "minecraft:location",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "creation:in_normal"
-                    },
-                    {
-                        "condition": "minecraft:entity_scores",
-                        "entity": "this",
-                        "scores": {
-                            "cr.event.InNormal": {
-                                "min": 1
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        "creation:in_normal",
+                        {
+                            "type": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "cr.event.InNormal": {
+                                    "min": 1
+                                }
                             }
                         }
-                    }
-                ]
+                    ]
+                }
             }
         }
     },

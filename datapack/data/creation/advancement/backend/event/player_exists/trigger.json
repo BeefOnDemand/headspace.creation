@@ -2,9 +2,7 @@
     "criteria": {
         "requirement": {
             "trigger": "minecraft:location",
-            "conditions": {
-                "player": []
-            }
+            "conditions": {}
         }
     },
     "rewards": {
