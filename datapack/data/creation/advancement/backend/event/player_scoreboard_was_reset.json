@@ -3,21 +3,18 @@
         "requirement": {
             "trigger": "minecraft:location",
             "conditions": {
-                "player": {
-                    "type": "minecraft:all_of",
-                    "terms": [
-                        {
-                            "type": "minecraft:inverted",
-                            "term": {
-                                "type": "entity_scores",
-                                "entity": "this",
-                                "scores": {
-                                    "cr.admin.PlayerInitialized": 1
-                                }
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "cr.admin.PlayerInitialized": 1
                             }
                         }
-                    ]
-                }
+                    }
+                ]
             }
         }
     },

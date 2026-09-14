@@ -3,22 +3,22 @@
         "requirement": {
             "trigger": "minecraft:location",
             "conditions": {
-                "player": {
-                    "type": "minecraft:all_of",
-                    "terms": [
-                        "creation:on_probation",
-                        {
-                            "type": "minecraft:inverted",
-                            "term": {
-                                "type": "minecraft:entity_scores",
-                                "entity": "this",
-                                "scores": {
-                                    "cr.admin.PlayerOnProbation": 1
-                                }
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "creation:on_probation"
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "cr.admin.PlayerOnProbation": 1
                             }
                         }
-                    ]
-                }
+                    }
+                ]
             }
         }
     },

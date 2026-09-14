@@ -3,20 +3,28 @@
         "requirement": {
             "trigger": "minecraft:tick",
             "conditions": {
-                "player": {
-                    "type": "minecraft:all_of",
-                    "terms": [
-                        "creation:on_superflat_transfer_bed",
-                        "creation:sneaking",
-                        {
-                            "type": "minecraft:entity_scores",
-                            "entity": "this",
-                            "scores": {
-                                "cr.event.SneakingOnSuperflatTransferBed": 0
+                "player": [
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "creation:on_superflat_transfer_bed"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "creation:sneaking"
                             }
+                        ]
+                    },
+                    {
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "cr.event.SneakingOnSuperflatTransferBed": 0
                         }
-                    ]
-                }
+                    }
+                ]
             }
         }
     },

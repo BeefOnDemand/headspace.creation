@@ -3,30 +3,33 @@
         "requirement": {
             "trigger": "minecraft:tick",
             "conditions": {
-                "player": {
-                    "type": "minecraft:all_of",
-                    "terms": [
-                        {
-                            "type": "minecraft:entity_scores",
-                            "entity": "this",
-                            "scores": {
-                                "cr.event.SneakingOnSuperflatTransferBed": {
-                                    "min": 1
-                                }
-                            }
-                        },
-                        {
-                            "type": "minecraft:inverted",
-                            "term": {
-                                "type": "minecraft:all_of",
-                                "terms": [
-                                    "creation:on_superflat_transfer_bed",
-                                    "creation:sneaking"
-                                ]
+                "player": [
+                    {
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "cr.event.SneakingOnSuperflatTransferBed": {
+                                "min": 1
                             }
                         }
-                    ]
-                }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:all_of",
+                            "terms": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "creation:on_superflat_transfer_bed"
+                                },
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "creation:sneaking"
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         }
     },

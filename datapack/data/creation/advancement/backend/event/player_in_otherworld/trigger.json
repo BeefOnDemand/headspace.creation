@@ -3,21 +3,21 @@
         "requirement": {
             "trigger": "minecraft:location",
             "conditions": {
-                "player": {
-                    "type": "minecraft:all_of",
-                    "terms": [
-                        "creation:in_otherworld",
-                        {
-                            "type": "minecraft:entity_scores",
-                            "entity": "this",
-                            "scores": {
-                                "cr.event.InOtherworld": {
-                                    "min": 1
-                                }
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "creation:in_otherworld"
+                    },
+                    {
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "cr.event.InOtherworld": {
+                                "min": 1
                             }
                         }
-                    ]
-                }
+                    }
+                ]
             }
         }
     },

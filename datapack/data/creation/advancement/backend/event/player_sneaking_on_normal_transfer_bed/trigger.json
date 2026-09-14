@@ -3,22 +3,30 @@
         "requirement": {
             "trigger": "minecraft:location",
             "conditions": {
-                "player": {
-                    "type": "minecraft:all_of",
-                    "terms": [
-                        "creation:on_normal_transfer_bed",
-                        "creation:sneaking",
-                        {
-                            "type": "minecraft:entity_scores",
-                            "entity": "this",
-                            "scores": {
-                                "cr.event.SneakingOnNormalTransferBed": {
-                                    "min": 1
-                                }
+                "player": [
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "creation:on_normal_transfer_bed"
+                            },
+                            {
+                                "condition": "minecraft:reference",
+                                "name": "creation:sneaking"
+                            }
+                        ]
+                    },
+                    {
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "cr.event.SneakingOnNormalTransferBed": {
+                                "min": 1
                             }
                         }
-                    ]
-                }
+                    }
+                ]
             }
         }
     },
